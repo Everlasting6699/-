@@ -183,4 +183,11 @@ function resetGame() {
 }
 
 // 在页面中加入倒计时显示
-document.body.insertAdjacentHTML('
+document.body.insertAdjacentHTML('beforeend', '<div id="timer" style="position: absolute; top: 10px; right: 10px; font-size: 24px;">剩余时间：60 秒</div>');
+
+// 游戏区域和显示区域的引用
+const gameArea = document.getElementById('gameArea');
+const displayArea = document.getElementById('displayArea');
+
+// 启动游戏
+startGame(1);  // 从第一关开始
